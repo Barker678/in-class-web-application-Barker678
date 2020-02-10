@@ -65,8 +65,8 @@ module.exports = function (grunt) {
             js: {
                 options: {
                     authKey: "serverA",
-                    host: "ftp.YOUR_USERNAME.suffolkweb.co.uk",
-                    dest: "/public_html/MODULE_DIR/",
+                    host: "ftp.jorden-barker.suffolkweb.co.uk",
+                    dest: "/public_html/Advanced_Web/",
                     port: 21
                 },
                 files: [
@@ -82,8 +82,8 @@ module.exports = function (grunt) {
             css: {
                 options: {
                     authKey: "serverA",
-                    host: "ftp.YOUR_USERNAME.suffolkweb.co.uk",
-                    dest: "/public_html/MODULE_DIR/",
+                    host: "ftp.jorden-barker.suffolkweb.co.uk",
+                    dest: "/public_html/Advanced_Web/",
                     port: 21
                 },
                 files: [
