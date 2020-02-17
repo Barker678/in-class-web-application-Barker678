@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
         <link rel="manifest" href="manifest.json" />
     </head>
-    <body class="home-page">
+    <body class="{$view_name}-page">
         <header>
             <div class="container p-0">
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -41,3 +41,58 @@
         </header>
         
         {block name="body"}{/block}
+        <footer class="mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Top recipes</h2>
+                        <ul>
+                            <li>
+                                <a href="recipe.html">Crunchy Salad</a>
+                            </li>
+                            <li>
+                                <a href="recipe.html">Beef Burger</a>
+                            </li>
+                            <li>
+                                <a href="recipe.html">Noodles</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Follow us</h2>
+                        <ul>
+                            <li>
+                                <a href="">Facbeook</a>
+                            </li>
+                            <li>
+                                <a href="">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <p>&copy; Student Recipes</p>
+                        <p>Created for educational purposes</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- PWA -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('service-worker.js');
+            }
+        </script>
+
+        <!-- Custom JS -->
+        <script src="scripts/scripts.min.js"></script>
+        <script>
+            $(function() {
+                home.init();
+            });
+        </script>
+    </body>
+</html>
