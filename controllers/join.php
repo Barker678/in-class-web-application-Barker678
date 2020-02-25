@@ -22,6 +22,18 @@ if($_POST){
         $attempt = $user->createUser($_POST);
 
         if($attempt) {
+            $to = $_POST['email'];
+            $subject = 'Welcome to StudentRecipes!';
+            $headers = "from: S196143@uos.ac.uk\r\n";
+            $headers .= "Reply-To: S196143@uos.ac.uk\r\n";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-Type: text/html: charset=ISO-8859-1\r\n";
+            $message = '<html><body>';
+            $message .= '<img src="./images/banner_1.jpg"';
+            $message .= '<h1>Welcome to StudentRecipes!</h1>';
+            $message .= '<p>You have succesfully registered an account with us!</p>';
+            $message .= '</body></html>';
+            mail($to, $subject, $message, $headers);
             header("location:index.php?p=login");
             exit();
         }else{
